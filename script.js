@@ -21,7 +21,8 @@ const personalMovieDB = {
 };
 
 
-for (let i = 0; i < 2; i++) {
+function rememberMyFilms () {
+ for (let i = 0; i < 2; i++) {
  const a = prompt('Один из последних просмотренных фильмов?', ''),
        b = prompt('На сколько оцените его?', '');
 
@@ -33,7 +34,13 @@ for (let i = 0; i < 2; i++) {
         i--;
        }
 }
+}
 
+rememberMyFilms();
+
+
+
+function detectPersonalLevel () {
 if (personalMovieDB.count < 10) {
     console.log("Просмотрено довольно мало фильмов");
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
@@ -43,4 +50,8 @@ if (personalMovieDB.count < 10) {
 } else {
     console.log("Произошла ошибка"); 
 }
+}
+
+detectPersonalLevel();
+
 console.log(personalMovieDB);
